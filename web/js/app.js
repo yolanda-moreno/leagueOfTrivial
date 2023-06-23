@@ -3,7 +3,7 @@ Vue.component('barra-nav', {
     async mounted() {
         // Returns an object with the user info in case it refreshes the page (it keeps its session),
         // if the object is empty, it means that user will have to log in.
-        await fetch(`../leagueOfTrivialG2/public/api/check-user`)
+        await fetch(`../leagueOfTrivialG2/api/api/check-user`)
             .then(response => response.json())
             .then(data => {
                 if (data.userName) {
